@@ -1,5 +1,5 @@
 # WebGL-clock-widget
-##A light weight 3D clock widget made with raw webGL
+## A light weight 3D clock widget made with raw webGL
 
 <img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/clockwidget.png" width="300px">
 
