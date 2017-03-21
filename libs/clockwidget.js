@@ -5,9 +5,7 @@
 function ClockWidget(DOMcontainer, opt) {
     "use strict";
 
-
     // TODO: set default background colors
-
 
     this.DOMcontainer = DOMcontainer;
     this.canvas = null;
@@ -23,12 +21,22 @@ function ClockWidget(DOMcontainer, opt) {
 
     // customizable params
     var textureUrl = 'assets/clocktext.png';
-    if(opt.hasOwnProperty('customTexture')) {
-        textureUrl = opt.customTexture;
+    if(opt.hasOwnProperty('texture')) {
+        textureUrl = opt.texture;
     } 
     this.clockTexture = this.load_texture(textureUrl, true);
 
     this.modelUrl = "assets/clock7.json";
+    if(opt.hasOwnProperty('mesh')) {
+        this.modelUrl = opt.mesh;
+    }
+
+    this.defaultBackground = [0.25490196, 0.23529411, 0.23137254];
+    if(opt.hasOwnProperty('background')) {
+        this.defaultBackground[0] = opt.background[0] / 255;
+        this.defaultBackground[1] = opt.background[1] / 255;
+        this.defaultBackground[2] = opt.background[2] / 255;
+    }
 
     this.colors = [
         [150,  132,  125 ],
@@ -387,7 +395,8 @@ ClockWidget.prototype.drawClock = function () {
     if (this.alpha || this.anim)
         this.ctx.clearColor(0.0, 0.0, 0.0, 0.0);
     else
-        this.ctx.clearColor(0.25490196, 0.23529411, 0.23137254, 1.0);
+        this.ctx.clearColor(this.defaultBackground[0], this.defaultBackground[1], this.defaultBackground[2], 1.0);
+        //this.ctx.clearColor(0.25490196, 0.23529411, 0.23137254, 1.0);
 
     this.ctx.clear(this.ctx.COLOR_BUFFER_BIT);
 

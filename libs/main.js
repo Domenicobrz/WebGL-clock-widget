@@ -3,25 +3,27 @@ window.addEventListener("load", init);
 function init() {
     var clockDOM = document.querySelector('#clockWidgetContainer');
     window.clock = new ClockWidget(clockDOM, {
-            alpha: true, 
+            alpha: false, 
             value: 0.55, 
-            anim: false,
+            anim: true,
             animcolors: [
                 [150, 0, 0],
                 [0, 150, 0],
                 [0, 0, 150]
             ],
             clockColors: {
-                display:    [100, 100, 100],
-                outerEdge:  [123, 23, 0],
-                innerEdge:  [123, 23, 0],
-                minHandle:  [123, 23, 0],
-                secHandle:  [123, 23, 0],
-                sec2Handle: [123, 23, 0],
-                hourHandle: [123, 23, 0],
-                circHandle: [123, 23, 0]
+                display:    [150,  132,  125 ],
+                outerEdge:  [150,  132,  125 ],
+                innerEdge:  [90,  78,  78  ],
+                minHandle:  [218,  200, 193 ],
+                secHandle:  [150,  132,  125 ],
+                sec2Handle: [90,  78,  78 ],
+                hourHandle: [255,  38, 38 ],
+                circHandle: [48,  48, 48 ],           
             },
-            customTexture: "assets/clocktext.png"
+            texture: "assets/clocktext.png",
+            mesh: "assets/clock7.json",
+            background: [255, 255, 255]
         });
 
     requestAnimationFrame(animate);
