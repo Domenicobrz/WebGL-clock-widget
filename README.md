@@ -1,7 +1,7 @@
 # WebGL-clock-widget
 ## A light weight 3D clock widget made with raw webGL
 
-<img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/clockwidget.png" width="300px">
+<img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/clockwidget.png" width="450px">
 
 Usage is as simple as creating a ClockWidget from an existing DOMContainer and updating it in your preferred 
 animation handler
@@ -44,7 +44,7 @@ window.clock = new ClockWidget(clockDOM, {
 
 Anim colors refers to three little "spheres" which will be animated inside the clock's display, resulting in the following output:
 
-<img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/animated.png" width="300px">
+<img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/animated.png" width="450px">
 
 
 The default mode has no alpha transparency and a default white background, both can be changed by adding the following options
