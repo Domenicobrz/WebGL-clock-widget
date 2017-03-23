@@ -13,7 +13,7 @@ var clockDOM = document.querySelector('#clockWidgetContainer');
 window.clock = new ClockWidget(clockDOM);
 
 // widget update 
-clock.draw(now);   
+clock.draw();   
 
 ```
 The above assumes that the clock.json and clocktext.png are both in the 'assets' folder, here's how you specify a different one:
