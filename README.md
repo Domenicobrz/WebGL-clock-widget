@@ -47,4 +47,42 @@ Anim colors refers to three little "spheres" which will be animated inside the c
 <img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/animated.png" width="450px">
 
 
-The default mode has no alpha transparency and a default white background, both can be changed by adding the following options
+If you prefer to have just the alpha and no animation:
+
+
+```javascript
+
+window.clock = new ClockWidget(clockDOM, {
+    alpha: false, 
+    value: 0.55, 
+});  
+
+```
+
+At worst, this is what the creation of the widget will look like if you specify custom animation & clock colors
+
+```javascript
+
+window.clock = new ClockWidget(clockDOM, {
+    anim: true,
+    animcolors: [
+        [150, 0, 0],
+        [0, 150, 0],
+        [0, 0, 150]
+    ],
+    clockColors: {
+        display:    [150,  132,  125 ],
+        outerEdge:  [150,  132,  125 ],
+        innerEdge:  [90,  78,  78  ],
+        minHandle:  [218,  200, 193 ],
+        secHandle:  [150,  132,  125 ],
+        sec2Handle: [90,  78,  78 ],
+        hourHandle: [255,  38, 38 ],
+        circHandle: [48,  48, 48 ],           
+    },
+    texture: "assets/clocktext.png",
+    mesh: "assets/clock7.json",
+    background: [255, 255, 255]
+});  
+
+```
