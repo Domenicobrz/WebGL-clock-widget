@@ -82,7 +82,6 @@ window.clock = new ClockWidget(clockDOM, {
     },
     texture: "assets/clocktext.png",
     mesh: "assets/clock7.json",
-    background: [255, 255, 255]
 });  
 
 ```
