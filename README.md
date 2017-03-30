@@ -47,13 +47,13 @@ Anim colors refers to three little "spheres" which will be animated inside the c
 <img src="https://github.com/Domenicobrz/WebGL-clock-widget/blob/master/screenshots/animated.png" width="450px">
 
 
-If you prefer to have just the alpha and no animation:
+If you prefer to have just the alpha transparency and no animation:
 
 
 ```javascript
 
 window.clock = new ClockWidget(clockDOM, {
-    alpha: false, 
+    alpha: true, 
     value: 0.55, 
 });  
 
